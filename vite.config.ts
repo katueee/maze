@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/maze/',
   plugins: [
     react(),
     VitePWA({
@@ -16,7 +17,7 @@ export default defineConfig({
         background_color: '#FFF8E7',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        start_url: '/maze/',
         icons: [
           {
             src: 'icon-192.svg',
