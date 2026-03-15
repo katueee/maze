@@ -1,0 +1,102 @@
+.title-screen {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.title-character-bounce {
+  font-size: 80px;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+.title-heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: #444;
+  text-align: center;
+  margin: 0;
+}
+
+.title-theme-name {
+  font-size: 16px;
+  color: #888;
+  margin: 0;
+}
+
+.title-hint {
+  font-size: 15px;
+  color: #777;
+  background: rgba(255,255,255,0.7);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.title-start-btn {
+  width: 100%;
+  max-width: 280px;
+  padding: 18px 0;
+  border: none;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.1s;
+}
+
+.title-start-btn:active {
+  transform: scale(0.96);
+}
+
+.title-difficulty {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title-diff-btn {
+  padding: 10px 14px;
+  border: 2px solid;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.1s;
+}
+
+.title-diff-btn.active {
+  border-color: transparent;
+}
+
+.title-diff-btn:active {
+  transform: scale(0.95);
+}
+
+.title-sound-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+  padding: 8px 16px;
+}

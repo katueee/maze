@@ -1,0 +1,101 @@
+.clear-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.clear-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.clear-particle {
+  position: absolute;
+  top: -40px;
+  font-size: 28px;
+  animation: fall 2s ease-in forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.clear-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 4px solid;
+  padding: 32px 24px;
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
+  animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 101;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.clear-character {
+  font-size: 60px;
+  animation: bounce-clear 1s ease-in-out infinite;
+}
+
+@keyframes bounce-clear {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.clear-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.clear-sub {
+  font-size: 16px;
+  color: #888;
+  margin: 0 0 8px;
+}
+
+.clear-goal {
+  font-size: 48px;
+  margin: 8px 0 16px;
+}
+
+.clear-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.1s;
+}
+
+.clear-btn:active {
+  transform: scale(0.96);
+}
